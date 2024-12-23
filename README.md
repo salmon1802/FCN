@@ -1,5 +1,6 @@
 If you have any questions, feel free to ask!  :)  
 *To ensure the correctness of the experimental results, please run DCNv3 in FuxiCTR==2.0.1 or the latest version.*
+
 This model was formerly known as DCNv3
 
 # xDCN: Combining Exponential and Linear Feature Interactions for Click-Through Rate Prediction
@@ -19,13 +20,6 @@ This model was formerly known as DCNv3
 </div>
 
 ![image](https://github.com/user-attachments/assets/11d6850f-5eec-4865-b5a7-4abbc2088508)
-
-
-
-
-
-
-
 
 
 
