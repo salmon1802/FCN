@@ -50,11 +50,11 @@ FuxiCTR: https://github.com/xue-pai/FuxiCTR
 If you find our code helpful for your research, please cite the following paper:
 
 ```bibtex
-@article{li2024dcnv3,
-  title={DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction},
+@article{li2025fcn,
+  title={FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction},
   author={Li, Honghao and Zhang, Yiwen and Zhang, Yi and Li, Hanwei and Sang, Lei and Zhu, Jieming},
   journal={arXiv preprint arXiv:2407.13349},
-  year={2024}
+  year={2025}
 }
 ```
 
