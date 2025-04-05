@@ -1,7 +1,7 @@
 If you have any questions, feel free to ask!  :)  
 *To ensure the correctness of the experimental results, please run DCNv3 in FuxiCTR==2.0.1 or the latest version.*
 
-This model was formerly known as DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction
+This model was formerly known as __DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction__
 
 # FCN: Fusing Exponential and Linear Cross Network for Click-Through Rate Prediction
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dcnv3-towards-next-generation-deep-cross/click-through-rate-prediction-on-criteo)](https://paperswithcode.com/sota/click-through-rate-prediction-on-criteo?p=dcnv3-towards-next-generation-deep-cross)
