@@ -1,5 +1,5 @@
 If you have any questions, feel free to ask!  :)  
-*To ensure the correctness of the experimental results, please run DCNv3 in FuxiCTR==2.0.1 or the latest version.*
+*To ensure the correctness of the experimental results, please run FCN in FuxiCTR==2.0.1 or the latest version.*
 
 This model was formerly known as __DCNv3: Towards Next Generation Deep Cross Network for CTR Prediction__
 
