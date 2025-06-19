@@ -16,7 +16,7 @@ tqdm
 Get the datasets from https://github.com/reczoo/Datasets
 
 ## Hyperparameter settings and logs
-Get the result of FCN from ./checkpoints
+Get the result of FCN from ./checkpoints  
 Get the result of baseline from https://github.com/reczoo/BARS/tree/main/ranking/ctr
 
 ## Acknowledgement
