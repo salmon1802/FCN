@@ -1,0 +1,9 @@
+base_config: ./config/
+base_expid: FCNv2_KDD12
+dataset_id: KDD12_x10
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 10000
+    exp_num_layers: [3, 4, 5, 6, 7]
+    lin_num_layers: [0, 1, 2, 3, 4]

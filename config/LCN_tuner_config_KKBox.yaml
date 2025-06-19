@@ -1,0 +1,8 @@
+base_config: ./config/
+base_expid: LCN_KKBox_csv
+dataset_id: KKBox_csv
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 10000
+    num_cross_layers: [1, 2, 3, 4, 5, 6, 8]

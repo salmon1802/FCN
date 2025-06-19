@@ -1,0 +1,107 @@
+2025-05-13 15:21:11,845 P686711 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Avazu_x4_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "1",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0",
+    "epochs": "100",
+    "eval_steps": "None",
+    "exp_num_layers": "3",
+    "feature_cols": "[{'active': False, 'dtype': 'str', 'name': 'id', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'hour', 'preprocess': 'convert_hour', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': ['C1', 'banner_pos', 'site_id', 'site_domain', 'site_category', 'app_id', 'app_domain', 'app_category', 'device_id', 'device_ip', 'device_model', 'device_type', 'device_conn_type', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20', 'C21'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'weekday', 'preprocess': 'convert_weekday', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'weekend', 'preprocess': 'convert_weekend', 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "3",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'click'}",
+    "learning_rate": "0.001",
+    "lin_num_layers": "4",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "FCNv1",
+    "model_id": "FCNv1_Avazu_002_c2509741",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_heads": "4",
+    "num_workers": "8",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2025",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Avazu_x4_h5/test.h5",
+    "train_data": "../../../data/Avazu_x4_h5/train.h5",
+    "use_features": "None",
+    "valid_data": "../../../data/Avazu_x4_h5/valid.h5",
+    "verbose": "1"
+}
+2025-05-13 15:21:11,846 P686711 INFO Load feature_map from json: ../../../data/Avazu_x4_h5/feature_map.json
+2025-05-13 15:21:11,846 P686711 INFO Set column index...
+2025-05-13 15:21:11,846 P686711 INFO Feature specs: {
+    "C1": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "C14": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 2555, 'vocab_size': 2556}",
+    "C15": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "C16": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "C17": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 433, 'vocab_size': 434}",
+    "C18": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5, 'vocab_size': 6}",
+    "C19": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 69, 'vocab_size': 70}",
+    "C20": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 172, 'vocab_size': 173}",
+    "C21": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 61, 'vocab_size': 62}",
+    "app_category": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 32, 'vocab_size': 33}",
+    "app_domain": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 399, 'vocab_size': 400}",
+    "app_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6544, 'vocab_size': 6545}",
+    "banner_pos": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "device_conn_type": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5, 'vocab_size': 6}",
+    "device_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 820508, 'vocab_size': 820509}",
+    "device_ip": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 2903321, 'vocab_size': 2903322}",
+    "device_model": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 7258, 'vocab_size': 7259}",
+    "device_type": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "hour": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 25, 'vocab_size': 26}",
+    "site_category": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 26, 'vocab_size': 27}",
+    "site_domain": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5460, 'vocab_size': 5461}",
+    "site_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4050, 'vocab_size': 4051}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "weekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}"
+}
+2025-05-13 15:21:18,133 P686711 INFO Total number of parameters: 240586234.
+2025-05-13 15:21:18,133 P686711 INFO Loading data...
+2025-05-13 15:21:18,133 P686711 INFO Loading data from h5: ../../../data/Avazu_x4_h5/train.h5
+2025-05-13 15:21:27,536 P686711 INFO Train samples: total/32343172, blocks/1
+2025-05-13 15:21:27,536 P686711 INFO Loading data from h5: ../../../data/Avazu_x4_h5/valid.h5
+2025-05-13 15:21:28,695 P686711 INFO Validation samples: total/4042897, blocks/1
+2025-05-13 15:21:28,695 P686711 INFO Loading train and validation data done.
+2025-05-13 15:21:28,695 P686711 INFO Start training: 3235 batches/epoch
+2025-05-13 15:21:28,695 P686711 INFO ************ Epoch=1 start ************
+2025-05-13 15:26:54,390 P686711 INFO Train loss: 0.379895
+2025-05-13 15:26:54,390 P686711 INFO Evaluation @epoch 1 - batch 3235: 
+2025-05-13 15:27:05,601 P686711 INFO ===
+2025-05-13 15:27:05,601 P686711 INFO [Metrics] AUC: 0.794446 - logloss: 0.370989
+2025-05-13 15:27:05,611 P686711 INFO Save best model: monitor(max)=0.794446
+2025-05-13 15:27:07,391 P686711 INFO ************ Epoch=1 end ************
+2025-05-13 15:32:33,076 P686711 INFO Train loss: 0.330338
+2025-05-13 15:32:33,076 P686711 INFO Evaluation @epoch 2 - batch 3235: 
+2025-05-13 15:32:44,430 P686711 INFO ===
+2025-05-13 15:32:44,430 P686711 INFO [Metrics] AUC: 0.791161 - logloss: 0.379479
+2025-05-13 15:32:44,435 P686711 INFO Monitor(max)=0.791161 STOP!
+2025-05-13 15:32:44,436 P686711 INFO Reduce learning rate on plateau: 0.000100
+2025-05-13 15:32:44,436 P686711 INFO ********* Epoch==2 early stop *********
+2025-05-13 15:32:44,838 P686711 INFO Training finished.
+2025-05-13 15:32:44,839 P686711 INFO Load best model: /root/autodl-tmp/model_zoo/DCNv3/DCNv3_torch/checkpoints/Avazu_x4_h5/FCNv1_Avazu_002_c2509741.model
+2025-05-13 15:32:45,356 P686711 INFO ****** Validation evaluation ******
+2025-05-13 15:32:56,647 P686711 INFO ===
+2025-05-13 15:32:56,647 P686711 INFO [Metrics] logloss: 0.370989 - AUC: 0.794446
+2025-05-13 15:32:56,990 P686711 INFO ******** Test evaluation ********
+2025-05-13 15:32:56,990 P686711 INFO Loading data...
+2025-05-13 15:32:56,990 P686711 INFO Loading data from h5: ../../../data/Avazu_x4_h5/test.h5
+2025-05-13 15:32:58,114 P686711 INFO Test samples: total/4042898, blocks/1
+2025-05-13 15:32:58,115 P686711 INFO Loading test data done.
+2025-05-13 15:33:08,814 P686711 INFO ===
+2025-05-13 15:33:08,814 P686711 INFO [Metrics] logloss: 0.370877 - AUC: 0.794629

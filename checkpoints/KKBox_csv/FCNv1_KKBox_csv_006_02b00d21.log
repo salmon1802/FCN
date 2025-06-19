@@ -1,0 +1,214 @@
+2025-05-13 20:37:19,298 P526759 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "KKBox_csv",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "128",
+    "embedding_regularizer": "0.0005",
+    "epochs": "100",
+    "eval_steps": "None",
+    "exp_num_layers": "5",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': ['msno', 'song_id', 'source_system_tab', 'source_screen_name', 'source_type', 'city', 'gender', 'registered_via', 'language'], 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 3, 'name': 'genre_ids', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'encoder': 'MaskedSumPooling', 'max_len': 3, 'name': 'artist_name', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'isrc', 'preprocess': 'extract_country_code', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'bd', 'preprocess': 'bucketize_age', 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "lin_num_layers": "4",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "model": "FCNv1",
+    "model_id": "FCNv1_KKBox_csv_006_02b00d21",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_heads": "1",
+    "num_workers": "8",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2025",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/KKBox_x1/test.csv",
+    "train_data": "../../../data/KKBox_x1/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/KKBox_x1/valid.csv",
+    "verbose": "1"
+}
+2025-05-13 20:37:19,298 P526759 INFO Set up feature processor...
+2025-05-13 20:37:19,298 P526759 WARNING Skip rebuilding ../../../data/KKBox_csv/feature_map.json. Please delete it manually if rebuilding is required.
+2025-05-13 20:37:19,298 P526759 INFO Load feature_map from json: ../../../data/KKBox_csv/feature_map.json
+2025-05-13 20:37:19,298 P526759 INFO Set column index...
+2025-05-13 20:37:19,298 P526759 INFO Feature specs: {
+    "artist_name": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 11975, 'vocab_size': 11976, 'max_len': 3}",
+    "bd": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "genre_ids": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'padding_idx': 0, 'oov_idx': 345, 'vocab_size': 346, 'max_len': 3}",
+    "isrc": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 79, 'vocab_size': 80}",
+    "language": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 11, 'vocab_size': 12}",
+    "msno": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 25962, 'vocab_size': 25963}",
+    "registered_via": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "song_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 53290, 'vocab_size': 53291}",
+    "source_screen_name": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 20, 'vocab_size': 21}",
+    "source_system_tab": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 9, 'vocab_size': 10}",
+    "source_type": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 13, 'vocab_size': 14}"
+}
+2025-05-13 20:37:23,410 P526759 INFO Total number of parameters: 24238100.
+2025-05-13 20:37:23,410 P526759 INFO Loading data...
+2025-05-13 20:37:23,410 P526759 INFO Loading data from h5: ../../../data/KKBox_csv/train.h5
+2025-05-13 20:37:24,436 P526759 INFO Train samples: total/5901932, blocks/1
+2025-05-13 20:37:24,436 P526759 INFO Loading data from h5: ../../../data/KKBox_csv/valid.h5
+2025-05-13 20:37:24,561 P526759 INFO Validation samples: total/737743, blocks/1
+2025-05-13 20:37:24,561 P526759 INFO Loading train and validation data done.
+2025-05-13 20:37:24,561 P526759 INFO Start training: 591 batches/epoch
+2025-05-13 20:37:24,561 P526759 INFO ************ Epoch=1 start ************
+2025-05-13 20:39:42,962 P526759 INFO Train loss: 0.606582
+2025-05-13 20:39:42,963 P526759 INFO Evaluation @epoch 1 - batch 591: 
+2025-05-13 20:39:47,048 P526759 INFO ===
+2025-05-13 20:39:47,048 P526759 INFO [Metrics] AUC: 0.805287 - logloss: 0.535310
+2025-05-13 20:39:47,053 P526759 INFO Save best model: monitor(max)=0.805287
+2025-05-13 20:39:47,399 P526759 INFO ************ Epoch=1 end ************
+2025-05-13 20:42:04,262 P526759 INFO Train loss: 0.589424
+2025-05-13 20:42:04,262 P526759 INFO Evaluation @epoch 2 - batch 591: 
+2025-05-13 20:42:08,289 P526759 INFO ===
+2025-05-13 20:42:08,289 P526759 INFO [Metrics] AUC: 0.817789 - logloss: 0.520787
+2025-05-13 20:42:08,295 P526759 INFO Save best model: monitor(max)=0.817789
+2025-05-13 20:42:08,692 P526759 INFO ************ Epoch=2 end ************
+2025-05-13 20:44:25,959 P526759 INFO Train loss: 0.583523
+2025-05-13 20:44:25,959 P526759 INFO Evaluation @epoch 3 - batch 591: 
+2025-05-13 20:44:29,973 P526759 INFO ===
+2025-05-13 20:44:29,973 P526759 INFO [Metrics] AUC: 0.823606 - logloss: 0.513693
+2025-05-13 20:44:29,978 P526759 INFO Save best model: monitor(max)=0.823606
+2025-05-13 20:44:30,309 P526759 INFO ************ Epoch=3 end ************
+2025-05-13 20:46:47,441 P526759 INFO Train loss: 0.579133
+2025-05-13 20:46:47,442 P526759 INFO Evaluation @epoch 4 - batch 591: 
+2025-05-13 20:46:51,475 P526759 INFO ===
+2025-05-13 20:46:51,475 P526759 INFO [Metrics] AUC: 0.827285 - logloss: 0.509516
+2025-05-13 20:46:51,481 P526759 INFO Save best model: monitor(max)=0.827285
+2025-05-13 20:46:51,860 P526759 INFO ************ Epoch=4 end ************
+2025-05-13 20:49:09,080 P526759 INFO Train loss: 0.576551
+2025-05-13 20:49:09,080 P526759 INFO Evaluation @epoch 5 - batch 591: 
+2025-05-13 20:49:13,214 P526759 INFO ===
+2025-05-13 20:49:13,215 P526759 INFO [Metrics] AUC: 0.830181 - logloss: 0.505774
+2025-05-13 20:49:13,221 P526759 INFO Save best model: monitor(max)=0.830181
+2025-05-13 20:49:13,559 P526759 INFO ************ Epoch=5 end ************
+2025-05-13 20:51:30,703 P526759 INFO Train loss: 0.573332
+2025-05-13 20:51:30,703 P526759 INFO Evaluation @epoch 6 - batch 591: 
+2025-05-13 20:51:34,703 P526759 INFO ===
+2025-05-13 20:51:34,703 P526759 INFO [Metrics] AUC: 0.831475 - logloss: 0.503671
+2025-05-13 20:51:34,708 P526759 INFO Save best model: monitor(max)=0.831475
+2025-05-13 20:51:35,036 P526759 INFO ************ Epoch=6 end ************
+2025-05-13 20:53:51,834 P526759 INFO Train loss: 0.571311
+2025-05-13 20:53:51,834 P526759 INFO Evaluation @epoch 7 - batch 591: 
+2025-05-13 20:53:55,690 P526759 INFO ===
+2025-05-13 20:53:55,690 P526759 INFO [Metrics] AUC: 0.833906 - logloss: 0.500754
+2025-05-13 20:53:55,696 P526759 INFO Save best model: monitor(max)=0.833906
+2025-05-13 20:53:56,059 P526759 INFO ************ Epoch=7 end ************
+2025-05-13 20:56:12,237 P526759 INFO Train loss: 0.569523
+2025-05-13 20:56:12,237 P526759 INFO Evaluation @epoch 8 - batch 591: 
+2025-05-13 20:56:15,977 P526759 INFO ===
+2025-05-13 20:56:15,977 P526759 INFO [Metrics] AUC: 0.834470 - logloss: 0.499977
+2025-05-13 20:56:15,982 P526759 INFO Save best model: monitor(max)=0.834470
+2025-05-13 20:56:16,307 P526759 INFO ************ Epoch=8 end ************
+2025-05-13 20:58:32,317 P526759 INFO Train loss: 0.568243
+2025-05-13 20:58:32,317 P526759 INFO Evaluation @epoch 9 - batch 591: 
+2025-05-13 20:58:36,112 P526759 INFO ===
+2025-05-13 20:58:36,112 P526759 INFO [Metrics] AUC: 0.835693 - logloss: 0.498363
+2025-05-13 20:58:36,117 P526759 INFO Save best model: monitor(max)=0.835693
+2025-05-13 20:58:36,458 P526759 INFO ************ Epoch=9 end ************
+2025-05-13 21:00:52,685 P526759 INFO Train loss: 0.567007
+2025-05-13 21:00:52,685 P526759 INFO Evaluation @epoch 10 - batch 591: 
+2025-05-13 21:00:56,575 P526759 INFO ===
+2025-05-13 21:00:56,575 P526759 INFO [Metrics] AUC: 0.836855 - logloss: 0.496684
+2025-05-13 21:00:56,580 P526759 INFO Save best model: monitor(max)=0.836855
+2025-05-13 21:00:56,977 P526759 INFO ************ Epoch=10 end ************
+2025-05-13 21:03:13,066 P526759 INFO Train loss: 0.565819
+2025-05-13 21:03:13,066 P526759 INFO Evaluation @epoch 11 - batch 591: 
+2025-05-13 21:03:16,933 P526759 INFO ===
+2025-05-13 21:03:16,934 P526759 INFO [Metrics] AUC: 0.837914 - logloss: 0.495245
+2025-05-13 21:03:16,939 P526759 INFO Save best model: monitor(max)=0.837914
+2025-05-13 21:03:17,345 P526759 INFO ************ Epoch=11 end ************
+2025-05-13 21:05:33,516 P526759 INFO Train loss: 0.564879
+2025-05-13 21:05:33,516 P526759 INFO Evaluation @epoch 12 - batch 591: 
+2025-05-13 21:05:37,383 P526759 INFO ===
+2025-05-13 21:05:37,383 P526759 INFO [Metrics] AUC: 0.838228 - logloss: 0.494996
+2025-05-13 21:05:37,389 P526759 INFO Save best model: monitor(max)=0.838228
+2025-05-13 21:05:37,715 P526759 INFO ************ Epoch=12 end ************
+2025-05-13 21:07:53,751 P526759 INFO Train loss: 0.563645
+2025-05-13 21:07:53,751 P526759 INFO Evaluation @epoch 13 - batch 591: 
+2025-05-13 21:07:57,602 P526759 INFO ===
+2025-05-13 21:07:57,602 P526759 INFO [Metrics] AUC: 0.838961 - logloss: 0.493944
+2025-05-13 21:07:57,607 P526759 INFO Save best model: monitor(max)=0.838961
+2025-05-13 21:07:57,985 P526759 INFO ************ Epoch=13 end ************
+2025-05-13 21:10:14,427 P526759 INFO Train loss: 0.563191
+2025-05-13 21:10:14,427 P526759 INFO Evaluation @epoch 14 - batch 591: 
+2025-05-13 21:10:18,379 P526759 INFO ===
+2025-05-13 21:10:18,379 P526759 INFO [Metrics] AUC: 0.839427 - logloss: 0.493535
+2025-05-13 21:10:18,385 P526759 INFO Save best model: monitor(max)=0.839427
+2025-05-13 21:10:18,766 P526759 INFO ************ Epoch=14 end ************
+2025-05-13 21:12:35,123 P526759 INFO Train loss: 0.562059
+2025-05-13 21:12:35,123 P526759 INFO Evaluation @epoch 15 - batch 591: 
+2025-05-13 21:12:38,922 P526759 INFO ===
+2025-05-13 21:12:38,922 P526759 INFO [Metrics] AUC: 0.840614 - logloss: 0.491804
+2025-05-13 21:12:38,928 P526759 INFO Save best model: monitor(max)=0.840614
+2025-05-13 21:12:39,351 P526759 INFO ************ Epoch=15 end ************
+2025-05-13 21:14:55,679 P526759 INFO Train loss: 0.561211
+2025-05-13 21:14:55,679 P526759 INFO Evaluation @epoch 16 - batch 591: 
+2025-05-13 21:14:59,486 P526759 INFO ===
+2025-05-13 21:14:59,486 P526759 INFO [Metrics] AUC: 0.840412 - logloss: 0.491891
+2025-05-13 21:14:59,491 P526759 INFO Monitor(max)=0.840412 STOP!
+2025-05-13 21:14:59,491 P526759 INFO Reduce learning rate on plateau: 0.000100
+2025-05-13 21:14:59,751 P526759 INFO ************ Epoch=16 end ************
+2025-05-13 21:17:15,977 P526759 INFO Train loss: 0.495671
+2025-05-13 21:17:15,977 P526759 INFO Evaluation @epoch 17 - batch 591: 
+2025-05-13 21:17:19,739 P526759 INFO ===
+2025-05-13 21:17:19,739 P526759 INFO [Metrics] AUC: 0.853101 - logloss: 0.476660
+2025-05-13 21:17:19,744 P526759 INFO Save best model: monitor(max)=0.853101
+2025-05-13 21:17:20,101 P526759 INFO ************ Epoch=17 end ************
+2025-05-13 21:19:36,289 P526759 INFO Train loss: 0.463937
+2025-05-13 21:19:36,289 P526759 INFO Evaluation @epoch 18 - batch 591: 
+2025-05-13 21:19:40,315 P526759 INFO ===
+2025-05-13 21:19:40,315 P526759 INFO [Metrics] AUC: 0.855707 - logloss: 0.473980
+2025-05-13 21:19:40,319 P526759 INFO Save best model: monitor(max)=0.855707
+2025-05-13 21:19:40,636 P526759 INFO ************ Epoch=18 end ************
+2025-05-13 21:21:56,649 P526759 INFO Train loss: 0.448888
+2025-05-13 21:21:56,650 P526759 INFO Evaluation @epoch 19 - batch 591: 
+2025-05-13 21:22:00,600 P526759 INFO ===
+2025-05-13 21:22:00,600 P526759 INFO [Metrics] AUC: 0.855944 - logloss: 0.475061
+2025-05-13 21:22:00,605 P526759 INFO Save best model: monitor(max)=0.855944
+2025-05-13 21:22:00,996 P526759 INFO ************ Epoch=19 end ************
+2025-05-13 21:24:17,096 P526759 INFO Train loss: 0.438273
+2025-05-13 21:24:17,097 P526759 INFO Evaluation @epoch 20 - batch 591: 
+2025-05-13 21:24:20,800 P526759 INFO ===
+2025-05-13 21:24:20,801 P526759 INFO [Metrics] AUC: 0.855496 - logloss: 0.477751
+2025-05-13 21:24:20,806 P526759 INFO Monitor(max)=0.855496 STOP!
+2025-05-13 21:24:20,806 P526759 INFO Reduce learning rate on plateau: 0.000010
+2025-05-13 21:24:21,056 P526759 INFO ************ Epoch=20 end ************
+2025-05-13 21:26:36,803 P526759 INFO Train loss: 0.405831
+2025-05-13 21:26:36,803 P526759 INFO Evaluation @epoch 21 - batch 591: 
+2025-05-13 21:26:40,476 P526759 INFO ===
+2025-05-13 21:26:40,476 P526759 INFO [Metrics] AUC: 0.853541 - logloss: 0.493006
+2025-05-13 21:26:40,481 P526759 INFO Monitor(max)=0.853541 STOP!
+2025-05-13 21:26:40,481 P526759 INFO Reduce learning rate on plateau: 0.000001
+2025-05-13 21:26:40,481 P526759 INFO ********* Epoch==21 early stop *********
+2025-05-13 21:26:40,701 P526759 INFO Training finished.
+2025-05-13 21:26:40,701 P526759 INFO Load best model: /root/autodl-tmp/model_zoo/DCNv3/DCNv3_torch/checkpoints/KKBox_csv/FCNv1_KKBox_csv_006_02b00d21.model
+2025-05-13 21:26:40,758 P526759 INFO ****** Validation evaluation ******
+2025-05-13 21:26:44,433 P526759 INFO ===
+2025-05-13 21:26:44,433 P526759 INFO [Metrics] logloss: 0.475061 - AUC: 0.855944
+2025-05-13 21:26:44,540 P526759 INFO ******** Test evaluation ********
+2025-05-13 21:26:44,540 P526759 INFO Loading data...
+2025-05-13 21:26:44,541 P526759 INFO Loading data from h5: ../../../data/KKBox_csv/test.h5
+2025-05-13 21:26:44,658 P526759 INFO Test samples: total/737743, blocks/1
+2025-05-13 21:26:44,658 P526759 INFO Loading test data done.
+2025-05-13 21:26:48,236 P526759 INFO ===
+2025-05-13 21:26:48,237 P526759 INFO [Metrics] logloss: 0.475116 - AUC: 0.855871

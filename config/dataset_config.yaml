@@ -1,0 +1,130 @@
+Avazu_x4_h5:
+    data_format: h5
+    data_root: ../../../data/
+    feature_cols:
+        - { active: false, dtype: str, name: id, type: categorical }
+        - { active: true, dtype: str, name: hour, preprocess: convert_hour, type: categorical }
+        - active: true
+          dtype: str
+          name: [ C1, banner_pos, site_id, site_domain, site_category, app_id, app_domain,
+                  app_category, device_id, device_ip, device_model, device_type, device_conn_type,
+                  C14, C15, C16, C17, C18, C19, C20, C21 ]
+          type: categorical
+        - { active: true, dtype: str, name: weekday, preprocess: convert_weekday, type: categorical }
+        - { active: true, dtype: str, name: weekend, preprocess: convert_weekend, type: categorical }
+    label_col: { dtype: float, name: click }
+    min_categr_count: 2
+    test_data: ../../../data/Avazu_x4_h5/test.h5
+    train_data: ../../../data/Avazu_x4_h5/train.h5
+    valid_data: ../../../data/Avazu_x4_h5/valid.h5
+
+Tenrec_x1:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: str
+        name: [user_id,item_id,video_category,gender,age,hist_1,hist_2,hist_3,hist_4,hist_5,hist_6,hist_7,hist_8,hist_9,hist_10]
+        type: categorical
+    label_col: {dtype: float, name: click}
+    min_categr_count: 10
+    test_data: ../../../data/Tenrec/test.csv
+    train_data: ../../../data/Tenrec/train.csv
+    valid_data: ../../../data/Tenrec/valid.csv
+
+Criteo_x4_10_h5:
+    data_format: h5
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        fill_na: 0
+        na_value: 0
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        preprocess: convert_to_bucket
+        type: categorical
+    -   active: true
+        dtype: str
+        fill_na: ''
+        na_value: ''
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: Label}
+    min_categr_count: 10
+    test_data: ../../../data/Criteo_x4_10_h5/test.h5
+    train_data: ../../../data/Criteo_x4_10_h5/train.h5
+    valid_data: ../../../data/Criteo_x4_10_h5/valid.h5
+
+ML_1M_7_x1:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: str
+        name: [UserID, Gender, Age, Occupation, MovieID, Release]
+        type: categorical
+    - {active: true, dtype: str, encoder: MaskedSumPooling, max_len: 5, name: Genres,
+        type: sequence, splitter: ^}
+    label_col: {dtype: float, name: Label}
+    min_categr_count: 1
+    test_data: ../../../data/ML_1M/test.csv
+    train_data: ../../../data/ML_1M/train.csv
+    valid_data: ../../../data/ML_1M/valid.csv
+
+iPinYou_x1_csv:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: str
+        name: [weekday,hour,IP,region,city,adexchange,domain,
+               slotid,slotwidth,slotheight,slotvisibility,slotformat,
+               creative,advertiser,useragent,slotprice]
+        type: categorical
+    label_col: {dtype: float, name: click}
+    min_categr_count: 2
+    test_data: ../../../data/iPinYou/test.csv
+    train_data: ../../../data/iPinYou/train.csv
+    valid_data: ../../../data/iPinYou/test.csv
+
+KKBox_csv:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: str
+        name: [msno, song_id, source_system_tab, source_screen_name, source_type,
+            city, gender, registered_via, language]
+        type: categorical
+    - {active: true, dtype: str, encoder: MaskedSumPooling, max_len: 3, name: genre_ids,
+        type: sequence}
+    - {active: true, dtype: str, encoder: MaskedSumPooling, max_len: 3, name: artist_name,
+        type: sequence}
+    - {active: true, dtype: str, name: isrc, preprocess: extract_country_code, type: categorical}
+    - {active: true, dtype: str, name: bd, preprocess: bucketize_age, type: categorical}
+    label_col: {dtype: float, name: label}
+    min_categr_count: 10
+    test_data: ../../../data/KKBox_x1/test.csv
+    train_data: ../../../data/KKBox_x1/train.csv
+    valid_data: ../../../data/KKBox_x1/valid.csv
+
+KDD12_x10:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [Depth, Position, Impression]
+        preprocess: convert_to_bucket
+        type: categorical
+    -   active: true
+        dtype: float
+        name: [DisplayURL, AdID, AdvertiserID, QueryID, KeywordID, TitleID, DescriptionID, UserID,
+                Gender, Age]
+        type: categorical
+    label_col: {dtype: float, name: Click}
+    min_categr_count: 10
+    test_data: ../../../data/KDD12/test.csv
+    train_data: ../../../data/KDD12/train.csv
+    valid_data: ../../../data/KDD12/valid.csv

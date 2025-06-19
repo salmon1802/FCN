@@ -1,0 +1,112 @@
+2025-05-16 01:06:17,217 P317266 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "10000",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "KDD12_x10",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "16",
+    "embedding_regularizer": "1e-07",
+    "epochs": "100",
+    "eval_steps": "None",
+    "exp_num_layers": "3",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['Depth', 'Position', 'Impression'], 'preprocess': 'convert_to_bucket', 'type': 'categorical'}, {'active': True, 'dtype': 'float', 'name': ['DisplayURL', 'AdID', 'AdvertiserID', 'QueryID', 'KeywordID', 'TitleID', 'DescriptionID', 'UserID', 'Gender', 'Age'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'Click'}",
+    "layer_norm": "True",
+    "learning_rate": "0.001",
+    "lin_num_layers": "3",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "model": "FCNv2",
+    "model_id": "FCNv2_KDD12_004_b48c497a",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_heads": "1",
+    "num_workers": "8",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2025",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/KDD12/test.csv",
+    "train_data": "../../../data/KDD12/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/KDD12/valid.csv",
+    "verbose": "1"
+}
+2025-05-16 01:06:17,218 P317266 INFO Set up feature processor...
+2025-05-16 01:06:17,218 P317266 WARNING Skip rebuilding ../../../data/KDD12_x10/feature_map.json. Please delete it manually if rebuilding is required.
+2025-05-16 01:06:17,218 P317266 INFO Load feature_map from json: ../../../data/KDD12_x10/feature_map.json
+2025-05-16 01:06:17,218 P317266 INFO Set column index...
+2025-05-16 01:06:17,218 P317266 INFO Feature specs: {
+    "AdID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 280097, 'vocab_size': 280098}",
+    "AdvertiserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 14416, 'vocab_size': 14417}",
+    "Age": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "Depth": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "DescriptionID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 614455, 'vocab_size': 614456}",
+    "DisplayURL": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22591, 'vocab_size': 22592}",
+    "Gender": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "Impression": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 90, 'vocab_size': 91}",
+    "KeywordID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 358326, 'vocab_size': 358327}",
+    "Position": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "QueryID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 997505, 'vocab_size': 997506}",
+    "TitleID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 762415, 'vocab_size': 762416}",
+    "UserID": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 1618170, 'vocab_size': 1618171}"
+}
+2025-05-16 01:06:21,748 P317266 INFO Total number of parameters: 74954554.
+2025-05-16 01:06:21,748 P317266 INFO Loading data...
+2025-05-16 01:06:21,748 P317266 INFO Loading data from h5: ../../../data/KDD12_x10/train.h5
+2025-05-16 01:06:33,896 P317266 INFO Train samples: total/113096830, blocks/1
+2025-05-16 01:06:33,896 P317266 INFO Loading data from h5: ../../../data/KDD12_x10/valid.h5
+2025-05-16 01:06:35,485 P317266 INFO Validation samples: total/14137104, blocks/1
+2025-05-16 01:06:35,485 P317266 INFO Loading train and validation data done.
+2025-05-16 01:06:35,485 P317266 INFO Start training: 11310 batches/epoch
+2025-05-16 01:06:35,485 P317266 INFO ************ Epoch=1 start ************
+2025-05-16 01:18:09,382 P317266 INFO Train loss: 0.157040
+2025-05-16 01:18:09,382 P317266 INFO Evaluation @epoch 1 - batch 11310: 
+2025-05-16 01:18:35,813 P317266 INFO ===
+2025-05-16 01:18:35,813 P317266 INFO [Metrics] AUC: 0.806411 - logloss: 0.150279
+2025-05-16 01:18:35,826 P317266 INFO Save best model: monitor(max)=0.806411
+2025-05-16 01:18:36,741 P317266 INFO ************ Epoch=1 end ************
+2025-05-16 01:30:12,636 P317266 INFO Train loss: 0.151778
+2025-05-16 01:30:12,637 P317266 INFO Evaluation @epoch 2 - batch 11310: 
+2025-05-16 01:30:39,213 P317266 INFO ===
+2025-05-16 01:30:39,213 P317266 INFO [Metrics] AUC: 0.809285 - logloss: 0.149755
+2025-05-16 01:30:39,227 P317266 INFO Save best model: monitor(max)=0.809285
+2025-05-16 01:30:40,206 P317266 INFO ************ Epoch=2 end ************
+2025-05-16 01:42:13,593 P317266 INFO Train loss: 0.148054
+2025-05-16 01:42:13,593 P317266 INFO Evaluation @epoch 3 - batch 11310: 
+2025-05-16 01:42:39,917 P317266 INFO ===
+2025-05-16 01:42:39,917 P317266 INFO [Metrics] AUC: 0.805577 - logloss: 0.151009
+2025-05-16 01:42:39,931 P317266 INFO Monitor(max)=0.805577 STOP!
+2025-05-16 01:42:39,931 P317266 INFO Reduce learning rate on plateau: 0.000100
+2025-05-16 01:42:40,538 P317266 INFO ************ Epoch=3 end ************
+2025-05-16 01:54:16,156 P317266 INFO Train loss: 0.130215
+2025-05-16 01:54:16,156 P317266 INFO Evaluation @epoch 4 - batch 11310: 
+2025-05-16 01:54:42,985 P317266 INFO ===
+2025-05-16 01:54:42,986 P317266 INFO [Metrics] AUC: 0.788077 - logloss: 0.163411
+2025-05-16 01:54:43,005 P317266 INFO Monitor(max)=0.788077 STOP!
+2025-05-16 01:54:43,005 P317266 INFO Reduce learning rate on plateau: 0.000010
+2025-05-16 01:54:43,005 P317266 INFO ********* Epoch==4 early stop *********
+2025-05-16 01:54:43,546 P317266 INFO Training finished.
+2025-05-16 01:54:43,547 P317266 INFO Load best model: /root/autodl-tmp/model_zoo/DCNv3/DCNv3_torch/checkpoints/KDD12_x10/FCNv2_KDD12_004_b48c497a.model
+2025-05-16 01:54:43,707 P317266 INFO ****** Validation evaluation ******
+2025-05-16 01:55:10,686 P317266 INFO ===
+2025-05-16 01:55:10,687 P317266 INFO [Metrics] logloss: 0.149755 - AUC: 0.809285
+2025-05-16 01:55:11,200 P317266 INFO ******** Test evaluation ********
+2025-05-16 01:55:11,200 P317266 INFO Loading data...
+2025-05-16 01:55:11,200 P317266 INFO Loading data from h5: ../../../data/KDD12_x10/test.h5
+2025-05-16 01:55:13,134 P317266 INFO Test samples: total/14137104, blocks/1
+2025-05-16 01:55:13,134 P317266 INFO Loading test data done.
+2025-05-16 01:55:39,767 P317266 INFO ===
+2025-05-16 01:55:39,767 P317266 INFO [Metrics] logloss: 0.149487 - AUC: 0.809600

@@ -1,0 +1,10 @@
+base_config: ./config/
+base_expid: FCNv2_KKBox_csv
+dataset_id: KKBox_csv
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 10000
+    exp_num_layers: [3, 4, 5]
+    lin_num_layers: [1, 2, 3, 4]
+    net_dropout: [0.2]

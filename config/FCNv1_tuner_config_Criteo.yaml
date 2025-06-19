@@ -1,0 +1,10 @@
+base_config: ./config/
+base_expid: FCNv1_Criteo
+dataset_id: Criteo_x4_10_h5
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 8192
+    exp_num_layers: [1, 2, 3, 4, 5]
+    lin_num_layers: [1, 2, 3, 4, 5]
+    net_dropout: [0.1]

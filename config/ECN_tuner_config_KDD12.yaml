@@ -1,0 +1,10 @@
+base_config: ./config/
+base_expid: ECN_KDD12_x10
+dataset_id: KDD12_x10
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 10000
+    num_cross_layers: [1, 2, 3, 4, 5, 6]
+    net_dropout: [0]
+    seed: [2024]

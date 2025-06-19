@@ -1,0 +1,9 @@
+base_config: ./config/
+base_expid: ECN_iPinYou_x1_csv
+dataset_id: iPinYou_x1_csv
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 4096
+    num_cross_layers: [3, 4]
+    net_dropout: [0.1, 0.2]

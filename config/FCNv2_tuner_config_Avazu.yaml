@@ -1,0 +1,9 @@
+base_config: ./config/
+base_expid: FCNv2_Avazu
+dataset_id: Avazu_x4_h5
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 10000
+    exp_num_layers: [3, 4, 5]
+    lin_num_layers: [3, 4, 5]

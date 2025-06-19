@@ -1,0 +1,181 @@
+2025-05-14 13:10:54,865 P574358 INFO Params: {
+    "batch_norm": "True",
+    "batch_size": "4096",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "iPinYou_x1_csv",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.001",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'str', 'name': ['weekday', 'hour', 'IP', 'region', 'city', 'adexchange', 'domain', 'slotid', 'slotwidth', 'slotheight', 'slotvisibility', 'slotformat', 'creative', 'advertiser', 'useragent', 'slotprice'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "3",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'click'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "ECN",
+    "model_id": "ECN_iPinYou_x1_csv_002_f2f77750",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': 0}",
+    "monitor_mode": "max",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_cross_layers": "3",
+    "num_heads": "1",
+    "num_workers": "8",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2025",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/iPinYou/test.csv",
+    "train_data": "../../../data/iPinYou/train.csv",
+    "use_features": "None",
+    "valid_data": "../../../data/iPinYou/test.csv",
+    "verbose": "1"
+}
+2025-05-14 13:10:54,866 P574358 INFO Set up feature processor...
+2025-05-14 13:10:54,866 P574358 WARNING Skip rebuilding ../../../data/iPinYou_x1_csv/feature_map.json. Please delete it manually if rebuilding is required.
+2025-05-14 13:10:54,866 P574358 INFO Load feature_map from json: ../../../data/iPinYou_x1_csv/feature_map.json
+2025-05-14 13:10:54,866 P574358 INFO Set column index...
+2025-05-14 13:10:54,866 P574358 INFO Feature specs: {
+    "IP": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 585532, 'vocab_size': 585533}",
+    "adexchange": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "advertiser": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 371, 'vocab_size': 372}",
+    "creative": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 132, 'vocab_size': 133}",
+    "domain": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 28622, 'vocab_size': 28623}",
+    "hour": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 25, 'vocab_size': 26}",
+    "region": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 36, 'vocab_size': 37}",
+    "slotformat": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 5, 'vocab_size': 6}",
+    "slotheight": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 15, 'vocab_size': 16}",
+    "slotid": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 50906, 'vocab_size': 50907}",
+    "slotprice": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 6, 'vocab_size': 7}",
+    "slotvisibility": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 12, 'vocab_size': 13}",
+    "slotwidth": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22, 'vocab_size': 23}",
+    "useragent": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 41, 'vocab_size': 42}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2025-05-14 13:10:59,269 P574358 INFO Total number of parameters: 10752343.
+2025-05-14 13:10:59,270 P574358 INFO Loading data...
+2025-05-14 13:10:59,270 P574358 INFO Loading data from h5: ../../../data/iPinYou_x1_csv/train.h5
+2025-05-14 13:11:04,008 P574358 INFO Train samples: total/15395258, blocks/1
+2025-05-14 13:11:04,009 P574358 INFO Loading data from h5: ../../../data/iPinYou_x1_csv/valid.h5
+2025-05-14 13:11:05,350 P574358 INFO Validation samples: total/4100716, blocks/1
+2025-05-14 13:11:05,350 P574358 INFO Loading train and validation data done.
+2025-05-14 13:11:05,350 P574358 INFO Start training: 3759 batches/epoch
+2025-05-14 13:11:05,350 P574358 INFO ************ Epoch=1 start ************
+2025-05-14 13:13:18,176 P574358 INFO Train loss: 0.007803
+2025-05-14 13:13:18,176 P574358 INFO Evaluation @epoch 1 - batch 3759: 
+2025-05-14 13:13:28,192 P574358 INFO ===
+2025-05-14 13:13:28,192 P574358 INFO [Metrics] AUC: 0.748458 - logloss: 0.005641
+2025-05-14 13:13:28,197 P574358 INFO Save best model: monitor(max)=0.748458
+2025-05-14 13:13:28,378 P574358 INFO ************ Epoch=1 end ************
+2025-05-14 13:15:45,482 P574358 INFO Train loss: 0.006309
+2025-05-14 13:15:45,482 P574358 INFO Evaluation @epoch 2 - batch 3759: 
+2025-05-14 13:15:57,318 P574358 INFO ===
+2025-05-14 13:15:57,319 P574358 INFO [Metrics] AUC: 0.754776 - logloss: 0.005635
+2025-05-14 13:15:57,323 P574358 INFO Save best model: monitor(max)=0.754776
+2025-05-14 13:15:57,822 P574358 INFO ************ Epoch=2 end ************
+2025-05-14 13:18:17,394 P574358 INFO Train loss: 0.006290
+2025-05-14 13:18:17,395 P574358 INFO Evaluation @epoch 3 - batch 3759: 
+2025-05-14 13:18:28,690 P574358 INFO ===
+2025-05-14 13:18:28,690 P574358 INFO [Metrics] AUC: 0.757119 - logloss: 0.005626
+2025-05-14 13:18:28,697 P574358 INFO Save best model: monitor(max)=0.757119
+2025-05-14 13:18:29,132 P574358 INFO ************ Epoch=3 end ************
+2025-05-14 13:20:46,019 P574358 INFO Train loss: 0.006262
+2025-05-14 13:20:46,019 P574358 INFO Evaluation @epoch 4 - batch 3759: 
+2025-05-14 13:20:57,178 P574358 INFO ===
+2025-05-14 13:20:57,178 P574358 INFO [Metrics] AUC: 0.743785 - logloss: 0.005696
+2025-05-14 13:20:57,188 P574358 INFO Monitor(max)=0.743785 STOP!
+2025-05-14 13:20:57,188 P574358 INFO Reduce learning rate on plateau: 0.000100
+2025-05-14 13:20:57,375 P574358 INFO ************ Epoch=4 end ************
+2025-05-14 13:23:14,363 P574358 INFO Train loss: 0.005908
+2025-05-14 13:23:14,363 P574358 INFO Evaluation @epoch 5 - batch 3759: 
+2025-05-14 13:23:25,340 P574358 INFO ===
+2025-05-14 13:23:25,340 P574358 INFO [Metrics] AUC: 0.775253 - logloss: 0.005570
+2025-05-14 13:23:25,345 P574358 INFO Save best model: monitor(max)=0.775253
+2025-05-14 13:23:25,862 P574358 INFO ************ Epoch=5 end ************
+2025-05-14 13:25:46,353 P574358 INFO Train loss: 0.005838
+2025-05-14 13:25:46,353 P574358 INFO Evaluation @epoch 6 - batch 3759: 
+2025-05-14 13:25:58,765 P574358 INFO ===
+2025-05-14 13:25:58,766 P574358 INFO [Metrics] AUC: 0.777012 - logloss: 0.005563
+2025-05-14 13:25:58,773 P574358 INFO Save best model: monitor(max)=0.777012
+2025-05-14 13:25:59,245 P574358 INFO ************ Epoch=6 end ************
+2025-05-14 13:28:20,460 P574358 INFO Train loss: 0.005828
+2025-05-14 13:28:20,461 P574358 INFO Evaluation @epoch 7 - batch 3759: 
+2025-05-14 13:28:31,842 P574358 INFO ===
+2025-05-14 13:28:31,843 P574358 INFO [Metrics] AUC: 0.780627 - logloss: 0.005545
+2025-05-14 13:28:31,846 P574358 INFO Save best model: monitor(max)=0.780627
+2025-05-14 13:28:32,350 P574358 INFO ************ Epoch=7 end ************
+2025-05-14 13:30:55,851 P574358 INFO Train loss: 0.005834
+2025-05-14 13:30:55,851 P574358 INFO Evaluation @epoch 8 - batch 3759: 
+2025-05-14 13:31:07,914 P574358 INFO ===
+2025-05-14 13:31:07,915 P574358 INFO [Metrics] AUC: 0.780734 - logloss: 0.005553
+2025-05-14 13:31:07,917 P574358 INFO Save best model: monitor(max)=0.780734
+2025-05-14 13:31:08,500 P574358 INFO ************ Epoch=8 end ************
+2025-05-14 13:33:34,807 P574358 INFO Train loss: 0.005840
+2025-05-14 13:33:34,808 P574358 INFO Evaluation @epoch 9 - batch 3759: 
+2025-05-14 13:33:48,119 P574358 INFO ===
+2025-05-14 13:33:48,119 P574358 INFO [Metrics] AUC: 0.779716 - logloss: 0.005544
+2025-05-14 13:33:48,124 P574358 INFO Monitor(max)=0.779716 STOP!
+2025-05-14 13:33:48,124 P574358 INFO Reduce learning rate on plateau: 0.000010
+2025-05-14 13:33:48,282 P574358 INFO ************ Epoch=9 end ************
+2025-05-14 13:36:13,827 P574358 INFO Train loss: 0.005714
+2025-05-14 13:36:13,828 P574358 INFO Evaluation @epoch 10 - batch 3759: 
+2025-05-14 13:36:24,551 P574358 INFO ===
+2025-05-14 13:36:24,551 P574358 INFO [Metrics] AUC: 0.782936 - logloss: 0.005534
+2025-05-14 13:36:24,558 P574358 INFO Save best model: monitor(max)=0.782936
+2025-05-14 13:36:25,015 P574358 INFO ************ Epoch=10 end ************
+2025-05-14 13:38:37,276 P574358 INFO Train loss: 0.005684
+2025-05-14 13:38:37,276 P574358 INFO Evaluation @epoch 11 - batch 3759: 
+2025-05-14 13:38:46,897 P574358 INFO ===
+2025-05-14 13:38:46,897 P574358 INFO [Metrics] AUC: 0.783656 - logloss: 0.005534
+2025-05-14 13:38:46,902 P574358 INFO Save best model: monitor(max)=0.783656
+2025-05-14 13:38:47,309 P574358 INFO ************ Epoch=11 end ************
+2025-05-14 13:40:58,072 P574358 INFO Train loss: 0.005664
+2025-05-14 13:40:58,072 P574358 INFO Evaluation @epoch 12 - batch 3759: 
+2025-05-14 13:41:08,286 P574358 INFO ===
+2025-05-14 13:41:08,287 P574358 INFO [Metrics] AUC: 0.783755 - logloss: 0.005531
+2025-05-14 13:41:08,293 P574358 INFO Save best model: monitor(max)=0.783755
+2025-05-14 13:41:08,728 P574358 INFO ************ Epoch=12 end ************
+2025-05-14 13:43:16,838 P574358 INFO Train loss: 0.005658
+2025-05-14 13:43:16,839 P574358 INFO Evaluation @epoch 13 - batch 3759: 
+2025-05-14 13:43:27,309 P574358 INFO ===
+2025-05-14 13:43:27,309 P574358 INFO [Metrics] AUC: 0.783998 - logloss: 0.005532
+2025-05-14 13:43:27,315 P574358 INFO Save best model: monitor(max)=0.783998
+2025-05-14 13:43:27,733 P574358 INFO ************ Epoch=13 end ************
+2025-05-14 13:45:36,490 P574358 INFO Train loss: 0.005646
+2025-05-14 13:45:36,490 P574358 INFO Evaluation @epoch 14 - batch 3759: 
+2025-05-14 13:45:46,661 P574358 INFO ===
+2025-05-14 13:45:46,662 P574358 INFO [Metrics] AUC: 0.783693 - logloss: 0.005532
+2025-05-14 13:45:46,668 P574358 INFO Monitor(max)=0.783693 STOP!
+2025-05-14 13:45:46,668 P574358 INFO Reduce learning rate on plateau: 0.000001
+2025-05-14 13:45:46,776 P574358 INFO ************ Epoch=14 end ************
+2025-05-14 13:47:54,507 P574358 INFO Train loss: 0.005586
+2025-05-14 13:47:54,508 P574358 INFO Evaluation @epoch 15 - batch 3759: 
+2025-05-14 13:48:04,826 P574358 INFO ===
+2025-05-14 13:48:04,827 P574358 INFO [Metrics] AUC: 0.783641 - logloss: 0.005533
+2025-05-14 13:48:04,832 P574358 INFO Monitor(max)=0.783641 STOP!
+2025-05-14 13:48:04,832 P574358 INFO Reduce learning rate on plateau: 0.000001
+2025-05-14 13:48:04,832 P574358 INFO ********* Epoch==15 early stop *********
+2025-05-14 13:48:04,939 P574358 INFO Training finished.
+2025-05-14 13:48:04,939 P574358 INFO Load best model: /mnt/public/lhh/code/model_zoo/DCNv3/DCNv3_torch/checkpoints/iPinYou_x1_csv/ECN_iPinYou_x1_csv_002_f2f77750.model
+2025-05-14 13:48:04,974 P574358 INFO ****** Validation evaluation ******
+2025-05-14 13:48:15,750 P574358 INFO ===
+2025-05-14 13:48:15,751 P574358 INFO [Metrics] logloss: 0.005532 - AUC: 0.783998
+2025-05-14 13:48:15,825 P574358 INFO ******** Test evaluation ********
+2025-05-14 13:48:15,825 P574358 INFO Loading data...
+2025-05-14 13:48:15,825 P574358 INFO Loading data from h5: ../../../data/iPinYou_x1_csv/test.h5
+2025-05-14 13:48:16,978 P574358 INFO Test samples: total/4100716, blocks/1
+2025-05-14 13:48:16,978 P574358 INFO Loading test data done.
+2025-05-14 13:48:27,331 P574358 INFO ===
+2025-05-14 13:48:27,331 P574358 INFO [Metrics] logloss: 0.005532 - AUC: 0.783998

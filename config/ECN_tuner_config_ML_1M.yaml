@@ -1,0 +1,9 @@
+base_config: ./config/
+base_expid: ECN_ML_1M_7_x1
+dataset_id: ML_1M_7_x1
+
+tuner_space:
+    model_root: './checkpoints/'
+    batch_size: 4096
+    num_cross_layers: [1, 2, 3, 4, 5, 6, 8]
+    net_dropout: [0.1]
