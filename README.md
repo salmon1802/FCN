@@ -16,8 +16,14 @@ tqdm
 Get the datasets from https://github.com/reczoo/Datasets
 
 ## Hyperparameter settings and logs
-Get the result of FCN from ./checkpoints  
+Get the result of FCN from https://github.com/salmon1802/FCN/tree/master/checkpoints 
 Get the result of baseline from https://github.com/reczoo/BARS/tree/main/ranking/ctr
+
+## Experiment results
+<img width="641" height="464" alt="image" src="https://github.com/user-attachments/assets/4db762a0-45e3-44ec-a854-185635715f4f" />
+
+<img width="963" height="553" alt="image" src="https://github.com/user-attachments/assets/f5015b7d-7c49-4764-9c34-70b22d1c7657" />
+
 
 ## Acknowledgement
 This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.  
