@@ -17,8 +17,8 @@ tqdm
 Get the datasets from https://github.com/reczoo/Datasets
 
 ## Hyperparameter settings and logs
-Get the result of FCN from https://github.com/salmon1802/FCN/tree/master/checkpoints 
-Get the result of baseline from https://github.com/reczoo/BARS/tree/main/ranking/ctr
+Get the result of FCN from https://github.com/salmon1802/FCN/tree/master/checkpoints   
+Get the result of baseline from https://github.com/reczoo/BARS/tree/main/ranking/ctr  
 
 ## Experiment results
 <img width="641" height="464" alt="image" src="https://github.com/user-attachments/assets/4db762a0-45e3-44ec-a854-185635715f4f" />
