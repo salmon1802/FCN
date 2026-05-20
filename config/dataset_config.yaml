@@ -1,5 +1,5 @@
-Avazu_x4_h5:
-    data_format: h5
+Avazu_x4:
+    data_format: csv
     data_root: ../../../data/
     feature_cols:
         - { active: false, dtype: str, name: id, type: categorical }
@@ -14,9 +14,9 @@ Avazu_x4_h5:
         - { active: true, dtype: str, name: weekend, preprocess: convert_weekend, type: categorical }
     label_col: { dtype: float, name: click }
     min_categr_count: 2
-    test_data: ../../../data/Avazu_x4_h5/test.h5
-    train_data: ../../../data/Avazu_x4_h5/train.h5
-    valid_data: ../../../data/Avazu_x4_h5/valid.h5
+    test_data: ../../../data/Avazu_x4/test.csv
+    train_data: ../../../data/Avazu_x4/train.csv
+    valid_data: ../../../data/Avazu_x4/valid.csv
 
 Tenrec_x1:
     data_format: csv
@@ -32,8 +32,8 @@ Tenrec_x1:
     train_data: ../../../data/Tenrec/train.csv
     valid_data: ../../../data/Tenrec/valid.csv
 
-Criteo_x4_10_h5:
-    data_format: h5
+Criteo_x4_001:
+    data_format: csv
     data_root: ../../../data/
     feature_cols:
     -   active: true
@@ -52,9 +52,9 @@ Criteo_x4_10_h5:
         type: categorical
     label_col: {dtype: float, name: Label}
     min_categr_count: 10
-    test_data: ../../../data/Criteo_x4_10_h5/test.h5
-    train_data: ../../../data/Criteo_x4_10_h5/train.h5
-    valid_data: ../../../data/Criteo_x4_10_h5/valid.h5
+    test_data: ../../../data/Criteo_x4_001/test.csv
+    train_data: ../../../data/Criteo_x4_001/train.csv
+    valid_data: ../../../data/Criteo_x4_001/valid.csv
 
 ML_1M_7_x1:
     data_format: csv
